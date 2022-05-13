@@ -15,7 +15,7 @@
 <body>
   
 <div class="container">
-<button onclick="func()">равняется...</button>
+<button onclick="func()">посмотреть</button>
 <p id="result"></p>
 </div>
 
@@ -24,7 +24,7 @@ function func()
 {
  const telegram = window.Telegram.WebApp
  const telegramData = telegram.initDataUnsafe
-var result = telegramData.query_id;
+var result = telegramData.query_id.Value;
 document.getElementById("result").innerHTML = result;
 }
 </script>
