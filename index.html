@@ -15,7 +15,9 @@
 <body>
   
 <div class="container">
-  ID = 
+    const telegram = window.Telegram.WebApp
+    const telegramData = telegram.initDataUnsafe
+  ID = telegramData.user.id
 </div>
 
 <script>
