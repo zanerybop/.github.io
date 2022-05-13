@@ -15,12 +15,18 @@
 <body>
   
 <div class="container">
-     $telegram = window.Telegram.WebApp
-    $telegramData = telegram.initDataUnsafe
-  ID = $telegramData
+<button onclick="func()">равняется...</button>
+<p id="result"></p>
 </div>
 
 <script>
+function func()
+{
+ const telegram = window.Telegram.WebApp
+ const telegramData = telegram.initDataUnsafe
+var result = telegramData.user;
+document.getElementById("result").innerHTML = result;
+}
 </script>
 
 </body>
