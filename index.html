@@ -25,7 +25,7 @@ function func()
  const telegram = window.Telegram.WebApp
  const telegramData = telegram.initDataUnsafe
 var result = telegramData.user.id;
-  telegram.sendData(result);
+  telegram.MainButton.Show()
 document.getElementById("result").innerHTML = result;
 }
 </script>
