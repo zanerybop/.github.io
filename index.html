@@ -15,7 +15,7 @@
 <body>
   
 <div class="container">
-<button onclick="func()">результат</button>
+<button onclick="func()">отправляем в бота</button>
 <p id="result"></p>
 </div>
 
@@ -25,6 +25,7 @@ function func()
  const telegram = window.Telegram.WebApp
  const telegramData = telegram.initDataUnsafe
 var result = telegramData.user.id;
+  telegram.SendData(result);
 document.getElementById("result").innerHTML = result;
 }
 </script>
