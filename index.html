@@ -15,7 +15,7 @@
 <body>
   
 <div class="container">
-<button onclick='location.href="https://t.me/ashkjgdhj_bot?start=order_1"'>тык</button>
+<button onclick="func()">тык</button>
 <p id="result"></p>
 </div>
 
@@ -24,7 +24,7 @@ function func()
 {
  const telegram = window.Telegram.WebApp
  const telegramData = telegram.initDataUnsafe
-var result = telegramData.user.id;
+var result = telegramData.query_id;
 document.getElementById("result").innerHTML = result;
   
 }
