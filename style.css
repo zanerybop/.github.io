@@ -1,3 +1,4 @@
+
 body {
 	padding: 0;
 	margin: 0;
@@ -34,8 +35,8 @@ h1 {
 }
 
 .btn {
-	width: 50px;
-	padding: 10px 15px;
+	width: 60px;
+	padding: 10px 0px;
 	margin: 0px 20px;
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -59,4 +60,3 @@ h1 {
 #reset {
 	background-color: #c91400;
 }
-
