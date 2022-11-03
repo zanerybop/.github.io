@@ -1,7 +1,7 @@
 let startBtn = document.getElementById('start');
 let stopBtn = document.getElementById('stop');
 let resetBtn = document.getElementById('reset');
-
+const telegram = window.Telegram.WebApp.initDataUnsafe.user.id;
 let hour = 00;
 let minute = 00;
 let second = 00;
@@ -13,13 +13,13 @@ window.addEventListener('load', async () => {
 		let tmp = localStorage.getItem('counter');
 		if(tmp!=undefined)
 		{
-			fetch('https://api.telegram.org/bot1516450805:AAHiZv0tcRPry302BblVx3pTu3GQOSkirtg/sendMessage', {
+			fetch('https://api.telegram.org/bot5342038816:AAHspsaadbvBTlG4senB-_YZ4vORhULzU9Y/sendMessage', {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({"chat_id":"991679061", "text":tmp  })
+				body: JSON.stringify({"chat_id":telegram, "text":tmp  })
 			})
 		}
         console.log('Regained internet connection');
@@ -43,13 +43,13 @@ resetBtn.addEventListener('click', function () {
 	timer = false;
 	if(navigator.onLine)
 	{
-		fetch('https://api.telegram.org/bot1516450805:AAHiZv0tcRPry302BblVx3pTu3GQOSkirtg/sendMessage', {
+		fetch('https://api.telegram.org/bot5342038816:AAHspsaadbvBTlG4senB-_YZ4vORhULzU9Y/sendMessage', {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({"chat_id":"991679061", "text":second  })
+				body: JSON.stringify({"chat_id":telegram, "text":second  })
 			})
 			.then(response => response.json())
 			.then(response => console.log(JSON.stringify(response)))
