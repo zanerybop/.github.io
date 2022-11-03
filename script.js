@@ -7,9 +7,6 @@ let minute = 00;
 let second = 00;
 let count = 00;
 
-window.addEventListener('offline', (e) => { console.log('offline'); });
-
-window.addEventListener('online', (e) => { console.log('online'); });
 startBtn.addEventListener('click', function () {
 	timer = true;
 	stopWatch();
@@ -32,6 +29,8 @@ resetBtn.addEventListener('click', function () {
 });
 
 function stopWatch() {
+	if(!window.navigator.onLine)
+		console.log("offline")
 	if (timer) {
 		count++;
 
