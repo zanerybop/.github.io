@@ -29,8 +29,8 @@ resetBtn.addEventListener('click', function () {
 });
 
 function stopWatch() {
-	if(minute == 2)
-		console.log("2 минуты")
+	if(navigator.onLine)
+		console.log("test")
 	if (timer) {
 		count++;
 
