@@ -29,8 +29,7 @@ resetBtn.addEventListener('click', function () {
 });
 
 function stopWatch() {
-	if(navigator.onLine)
-		console.log("test")
+		console.log(navigator.userAgent)
 	if (timer) {
 		count++;
 
