@@ -6,9 +6,8 @@ CACHE:
 index.html
  
 # styles & scripts
-css/theme.css
-js/jquery.min.js
-js/default.js
+style.css
+script.js
  
 # images
 /favicon.ico
