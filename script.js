@@ -8,6 +8,7 @@ let second = 00;
 let count = 00;
 window.addEventListener('load', async () => {
 
+	console.log("asd");
     window.addEventListener('online', () => {
         console.log('Regained internet connection');
     });
@@ -16,7 +17,7 @@ window.addEventListener('load', async () => {
         console.log('Lost internet connection');
     });
 
-)};
+});
 startBtn.addEventListener('click', function () {
 	timer = true;
 	stopWatch();
