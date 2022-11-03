@@ -10,11 +10,23 @@ window.addEventListener('load', async () => {
 
 	console.log("asd");
     window.addEventListener('online', () => {
-        alert('Regained internet connection');
+		let tmp = localStorage.getItem('counter');
+		if(tmp!=undefined)
+		{
+			fetch('https://api.telegram.org/bot1516450805:AAHiZv0tcRPry302BblVx3pTu3GQOSkirtg/sendMessage', {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({"chat_id":"991679061", "text":tmp  })
+			})
+		}
+        console.log('Regained internet connection');
     });
 
     window.addEventListener('offline', () => {
-        alert('Lost internet connection');
+        console.log('Lost internet connection');
     });
 
 });
@@ -29,6 +41,20 @@ stopBtn.addEventListener('click', function () {
 
 resetBtn.addEventListener('click', function () {
 	timer = false;
+	if(navigator.onLine)
+	{
+		fetch('https://api.telegram.org/bot1516450805:AAHiZv0tcRPry302BblVx3pTu3GQOSkirtg/sendMessage', {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({"chat_id":"991679061", "text":second  })
+			})
+			.then(response => response.json())
+			.then(response => console.log(JSON.stringify(response)))
+	}
+	localStorage.setItem('counter',second)
 	hour = 0;
 	minute = 0;
 	second = 0;
