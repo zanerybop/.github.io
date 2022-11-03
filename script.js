@@ -10,11 +10,11 @@ window.addEventListener('load', async () => {
 
 	console.log("asd");
     window.addEventListener('online', () => {
-        console.log('Regained internet connection');
+        alert('Regained internet connection');
     });
 
     window.addEventListener('offline', () => {
-        console.log('Lost internet connection');
+        alert('Lost internet connection');
     });
 
 });
