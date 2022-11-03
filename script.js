@@ -6,12 +6,17 @@ let hour = 00;
 let minute = 00;
 let second = 00;
 let count = 00;
-window.addEventListener('offline', (event) => {
-    console.log("The network connection has been lost.");
-});
-window.addEventListener('online', (event) => {
-    console.log("You are now connected to the network.");
-});
+window.addEventListener('load', async () => {
+
+    window.addEventListener('online', () => {
+        console.log('Regained internet connection');
+    });
+
+    window.addEventListener('offline', () => {
+        console.log('Lost internet connection');
+    });
+
+)};
 startBtn.addEventListener('click', function () {
 	timer = true;
 	stopWatch();
