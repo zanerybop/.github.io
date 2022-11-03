@@ -6,7 +6,12 @@ let hour = 00;
 let minute = 00;
 let second = 00;
 let count = 00;
-
+window.addEventListener('offline', (event) => {
+    console.log("The network connection has been lost.");
+});
+window.addEventListener('online', (event) => {
+    console.log("You are now connected to the network.");
+});
 startBtn.addEventListener('click', function () {
 	timer = true;
 	stopWatch();
@@ -29,8 +34,6 @@ resetBtn.addEventListener('click', function () {
 });
 
 function stopWatch() {
-	if(!window.navigator.onLine)
-		console.log("offline")
 	if (timer) {
 		count++;
 
